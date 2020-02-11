@@ -32,20 +32,20 @@ public class Inicializar {
         caps.setCapability("os_version", "10");
         caps.setCapability("resolution", "1280x800");
 
-        WebDriver navegador = null;
+        WebDriver driver = null;
 
         try {
-            navegador = new RemoteWebDriver(new URL(URL), caps);
-            navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); // (Espera Implicita)
+            driver = new RemoteWebDriver(new URL(URL), caps);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); // (Espera Implicita)
 
             // Navegando para a pagina do Taskit!
-            navegador.get("http://www.juliodelima.com.br/taskit");
+            driver.get("http://www.juliodelima.com.br/taskit");
 
         } catch (MalformedURLException e) {
             System.out.println("Houveram problemas na conexao com a URL " + e.getMessage());
         }
 
-        return navegador;
+        return driver;
 
     }
 }

@@ -18,7 +18,7 @@ public class BaseTest {
 	public TestName testName = new TestName();
 	
 	@Before
-	public void inializar() {
+	public void inializa() {
 		page.acessarTelaInicial();
 		page.setEmail("nilton@teste.com.br");
 		page.setPassword("080114");

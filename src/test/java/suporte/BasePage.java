@@ -36,11 +36,11 @@ public class BasePage {
 	public void confirmarCampo(String id_campo) {
 		DriverFactory.getDriver().findElement(By.id(id_campo)).sendKeys(Keys.ENTER);;
 	}
-	public String obterValorCampo(String id_campo) {
-		return DriverFactory.getDriver().findElement(By.id(id_campo)).getText();
+	public String obterValorCampo(By by) {
+		return DriverFactory.getDriver().findElement(by).getText();
 	}
-	public String obterValorCampo_2(String id_campo2) {
-		return DriverFactory.getDriver().findElement(By.xpath(id_campo2)).getText();
+	public String obterValorCampo(String id_campo) {
+		return obterValorCampo(By.id(id_campo));
 	}
 	public String obterValorCampo_3(String id_campo3) {
 		return DriverFactory.getDriver().findElement(By.xpath(id_campo3)).getTagName();
@@ -115,6 +115,12 @@ public class BasePage {
 		Actions act = new Actions(DriverFactory.getDriver());
 		WebElement clique = DriverFactory.getDriver().findElement(By.xpath(xpath_botao));
 		act.moveToElement(clique).click().build().perform();
+	}
+	
+	////Link
+	
+	public void clicarLink(String link) {
+		DriverFactory.getDriver().findElement(By.linkText(link)).click();
 	}
 	
 	
