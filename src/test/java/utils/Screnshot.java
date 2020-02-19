@@ -1,9 +1,12 @@
-package suporte;
+package utils;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
+import suporte.DriverFactory;
+
 import java.io.File;
 
 

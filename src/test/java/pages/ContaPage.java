@@ -14,12 +14,18 @@ public class ContaPage extends BasePage {
 		clicarBotao(By.xpath("//button[text()='Salvar']"));
 	}
 	
+	public void clicarBotaoExcluir(String conta) {
+		//clicarBotao(By.xpath("//span[@class='glyphicon glyphicon-remove-circle']"));
+		obterCelula("Conta", conta, "Ações", "tabelaContas").findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
+	}
+	
 	public String obterMensagemSucesso() {
 		return obterValorCampo(By.xpath("//div[@class='alert alert-success']"));
 	}
 	
-	public void alterarConta() {
-		clicarBotao(By.xpath("//span[@class='glyphicon glyphicon-edit']"));
+	public void clicarBotaoAlterar(String conta) {
+		//clicarBotao(By.xpath("//span[@class='glyphicon glyphicon-edit']"));
+		obterCelula("Conta", conta, "Ações", "tabelaContas").findElement(By.xpath(".//span[@class='glyphicon glyphicon-edit']")).click();
 	}
 	
 	public String obterMensagemErro() {
