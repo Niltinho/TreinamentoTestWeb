@@ -10,7 +10,6 @@ import org.junit.runners.MethodSorters;
 import pages.ContaPage;
 import pages.MenuPage;
 import suporte.BaseTest;
-import suporte.Propriedades;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ContaTest extends BaseTest {
@@ -32,7 +31,7 @@ public class ContaTest extends BaseTest {
 		menuPage.acessarTelaListarConta();
 		
 		contaPage.clicarBotaoAlterar("NiltonTeste");
-		contaPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
+		contaPage.setConta("NiltonTesteAlterado");
 		contaPage.clicarBotaoSalvar();
 		assertEquals("Conta alterada com sucesso!", contaPage.obterMensagemSucesso());
 		
@@ -43,7 +42,7 @@ public class ContaTest extends BaseTest {
 	public void test3_InserirContaMesmoNome() {
 		menuPage.acessarTelaAdicionarConta();
 		
-		contaPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
+		contaPage.setConta("NiltonTesteAlterado");
 		contaPage.clicarBotaoSalvar();
 		assertEquals("Já existe uma conta com esse nome!", contaPage.obterMensagemErro());
 	}

@@ -7,7 +7,6 @@ import org.junit.Test;
 import pages.ContaPage;
 import pages.MenuPage;
 import suporte.BaseTest;
-import suporte.Propriedades;
 
 public class RemoverMovimentacaoContaTest extends BaseTest {
 	
@@ -18,7 +17,7 @@ public class RemoverMovimentacaoContaTest extends BaseTest {
 	public void testExcluirContaEmUso() {
 		menuPage.acessarTelaListarConta();
 		
-		contaPage.clicarBotaoExcluir(Propriedades.NOME_CONTA_ALTERADA);
+		contaPage.clicarBotaoExcluir("NiltonTesteAlterado");
 		assertEquals("Conta em uso na movimentações", contaPage.obterMensagemErro());
 	}
 

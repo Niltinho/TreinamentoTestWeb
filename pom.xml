@@ -4,7 +4,7 @@
   <artifactId>TreinamentoTestWeb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>AllureReporting</name>
+<name>AllureReporting</name>
 <url>http://maven.apache.org</url>
 
 <properties>
@@ -81,6 +81,32 @@
 		    <scope>test</scope>
 		</dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M4</version>
+</dependency>
+
+
 </dependencies>
+
+<build>
+  	<testSourceDirectory>src</testSourceDirectory>
+  		<plugins>
+  			<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-surefire-plugin</artifactId>
+	  			<version>3.0.0-M4</version>
+	  			<configuration>
+	  				<includes>
+	  					<include>suites/*.java</include>
+	  				</includes>
+	  				<parallel>all</parallel>
+	  				<threadCount>3</threadCount>
+	  			</configuration>
+	  		</plugin>
+  		</plugins>
+  </build>
   
 </project>
