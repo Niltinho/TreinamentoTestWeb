@@ -3,9 +3,6 @@
   <groupId>br.nilton</groupId>
   <artifactId>TreinamentoTestWeb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-<name>AllureReporting</name>
-<url>http://maven.apache.org</url>
 
 <properties>
 	<project.build.sourceEnconding>UFT-8</project.build.sourceEnconding>
@@ -13,44 +10,11 @@
   
 <dependencies>
 
-
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<dependency>
-		    <groupId>org.testng</groupId>
-		    <artifactId>testng</artifactId>
-		    <version>7.1.0</version>
-		    <scope>test</scope>
-		</dependency>
-
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.6.0</version>
+    <version>3.141.59</version>
 </dependency>
-
-
-<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-		<dependency>
-		    <groupId>io.qameta.allure</groupId>
-		    <artifactId>allure-testng</artifactId>
-		    <version>2.13.0</version>
-		</dependency>
-		
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
-		    <groupId>io.github.bonigarcia</groupId>
-		    <artifactId>webdrivermanager</artifactId>
-		    <version>3.7.1</version>
-		</dependency>
-		
-
-		<dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java8</artifactId>
-            <version>4.3.1</version>
-            <scope>test</scope>
-		</dependency>
 		
 <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
@@ -59,35 +23,13 @@
 		    <version>2.6</version>
 		</dependency>
 		
-		<dependency>
-   			<groupId>pl.pragmatists</groupId>
-		    <artifactId>JUnitParams</artifactId>
-		    <version>1.1.0</version>
-		    <scope>test</scope>
-		</dependency>
 		
-<!-- https://mvnrepository.com/artifact/org.easetech/easytest-core -->
-		<dependency>
-		    <groupId>org.easetech</groupId>
-		    <artifactId>easytest-core</artifactId>
-		    <version>1.4.0</version>
-		</dependency>
-
 <!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
 		    <version>4.12</version>
-		    <scope>test</scope>
 		</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M4</version>
-</dependency>
-
 
 </dependencies>
 
@@ -103,7 +45,7 @@
 	  					<include>suites/*.java</include>
 	  				</includes>
 	  				<parallel>all</parallel>
-	  				<threadCount>3</threadCount>
+	  				<threadCount>2</threadCount>
 	  			</configuration>
 	  		</plugin>
   		</plugins>

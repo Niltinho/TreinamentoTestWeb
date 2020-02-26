@@ -1,7 +1,7 @@
 package tests;
 
-import static org.testng.Assert.assertEquals;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import pages.ContaPage;
@@ -18,7 +18,7 @@ public class RemoverMovimentacaoContaTest extends BaseTest {
 		menuPage.acessarTelaListarConta();
 		
 		contaPage.clicarBotaoExcluir("NiltonTesteAlterado");
-		assertEquals("Conta em uso na movimentações", contaPage.obterMensagemErro());
+		Assert.assertEquals("Conta em uso na movimentações", contaPage.obterMensagemErro());
 	}
 
 }

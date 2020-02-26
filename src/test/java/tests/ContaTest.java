@@ -1,8 +1,5 @@
 package tests;
-
-
-import static org.testng.Assert.assertEquals;
-
+import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -23,7 +20,7 @@ public class ContaTest extends BaseTest {
 		
 		contaPage.setConta("NiltonTeste");
 		contaPage.clicarBotaoSalvar();
-		assertEquals("Conta adicionada com sucesso!", contaPage.obterMensagemSucesso());
+		Assert.assertEquals("Conta adicionada com sucesso!", contaPage.obterMensagemSucesso());
 	}
 	
 	@Test
@@ -33,7 +30,7 @@ public class ContaTest extends BaseTest {
 		contaPage.clicarBotaoAlterar("NiltonTeste");
 		contaPage.setConta("NiltonTesteAlterado");
 		contaPage.clicarBotaoSalvar();
-		assertEquals("Conta alterada com sucesso!", contaPage.obterMensagemSucesso());
+		Assert.assertEquals("Conta alterada com sucesso!", contaPage.obterMensagemSucesso());
 		
 		
 	}
@@ -44,7 +41,7 @@ public class ContaTest extends BaseTest {
 		
 		contaPage.setConta("NiltonTesteAlterado");
 		contaPage.clicarBotaoSalvar();
-		assertEquals("Já existe uma conta com esse nome!", contaPage.obterMensagemErro());
+		Assert.assertEquals("Já existe uma conta com esse nome!", contaPage.obterMensagemErro());
 	}
 	
 }

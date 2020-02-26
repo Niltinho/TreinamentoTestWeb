@@ -1,7 +1,7 @@
 package tests;
 
-import static org.testng.Assert.assertEquals;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import pages.HomePage;
@@ -17,7 +17,7 @@ public class SaldoTest extends BaseTest {
 	public void testSaldoConta() {
 		page.acessarTelaPrincipal();
 		
-		assertEquals("-150.00", homePage.validarSaldoConta("NiltonTesteAlterado"));
+		Assert.assertEquals("-150.00", homePage.validarSaldoConta("NiltonTesteAlterado"));
 	}
 
 }

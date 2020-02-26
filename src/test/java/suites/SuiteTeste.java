@@ -1,12 +1,10 @@
 package suites;
 
 import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import pages.LoginPage;
 import suporte.DriverFactory;
 import tests.ContaTest;
 import tests.MovimentacaoTest;
@@ -22,23 +20,23 @@ import tests.SaldoTest;
 	SaldoTest.class,
 	ResumoMensalTest.class
 })
+
 public class SuiteTeste {
 	
-	private static LoginPage page = new LoginPage();
-	
-	@BeforeClass
-	public static void inializa() {
+	/*@BeforeClass
+	public static void inicializar() {
 		page.acessarTelaInicial();
 		
 		page.setEmail("nilton@teste.com.br");
 		page.setPassword("080114");
 		page.clicarBotaoEntrar();
 		
-	}
+		DriverFactory.killDriver();
+	}*/
 	
 	@AfterClass
 	public static void finaliza() {
 		DriverFactory.killDriver();
 	}
-
+	
 }

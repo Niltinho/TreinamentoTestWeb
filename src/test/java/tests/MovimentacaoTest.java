@@ -1,10 +1,10 @@
 package tests;
 
 import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
 
 import java.util.Date;
 
+import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -32,7 +32,7 @@ public class MovimentacaoTest extends BaseTest {
 		movimentacaoPage.setValor("150");
 		movimentacaoPage.setSituacaoPago();
 		movimentacaoPage.clicarBotaoSalvar();
-		assertEquals("Movimentação adicionada com sucesso!", movimentacaoPage.obterMensagemSucesso());
+		Assert.assertEquals("Movimentação adicionada com sucesso!", movimentacaoPage.obterMensagemSucesso());
 	}
 	
 	@Test
